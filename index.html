@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iAds </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&family=Rubik:wght@400;500&family=Inter:wght@400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding-top: 115px; 
+    }
+
+
+
+
+
+
+    .navbar-custom {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      background-color: transparent;
+      padding: 16px 0;
+    }
+
+    .navbar-scrolled {
+      background-color: white !important;
+    }
+
+    .navbar-nav .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      color: black;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-dark .nav-link {
+      color: white !important;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: limegreen;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .get-started-btn {
+      font-family: 'Manrope', sans-serif;
+      border: 1px solid black;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      color: black;
+    }
+
+    .navbar-dark .get-started-btn {
+      color: white;
+      border-color: white;
+    }
+
+    .get-started-btn:hover {
+      background-color: limegreen;
+      color: black;
+      border-color: limegreen;
+    }
+
+    .offcanvas-custom {
+  background-color: #000 !important;
+  color: white;
+  width: 250px;
+}
+
+.offcanvas-custom .nav-link {
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.offcanvas-custom .get-started-btn {
+  color: white;
+  border-color: white;
+}
+
+.offcanvas-custom .get-started-btn:hover {
+  background-color: limegreen;
+  color: black;
+  border-color: limegreen;
+}
+
+/* White close icon */
+.btn-close {
+  filter: invert(1);
+}
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+
+
+
+
+        .hero-section {
+      padding: 40px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+.hero-section .hero-heading {
+  font-weight: 600;
+  color: #010205;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-heading {
+    font-size: 3rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .hero-section .hero-description {
+    text-align: center;
+  }
+
+  .hero-section .d-flex.align-items-center {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+    .hero-section .hero-description {
+      font-weight: 500;
+      color: #878C91;
+      font-size: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-section .btn-schedule {
+      background-color: #000;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .hero-section .btn-schedule:hover {
+      background-color: #333;
+    }
+
+    .hero-section .btn-case-study {
+      font-weight: 600;
+      color: #010205;
+      margin-left: 20px;
+      /* text-decoration: none; */
+    }
+
+    .hero-section .btn-case-study:hover {
+      text-decoration: none;
+    }
+
+    .hero-section .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .brand-container {
+    background-color: #FFFBFB;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11); /* #0000001C is 11% opacity */
+    border-radius: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    padding: 10px;
+  }
+
+  .brand-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .brand-logo {
+    height: 80px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .brand-logo {
+      height: 20px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .service{
+            background-color: #FFFFFF;
+        }
+        .service-section {
+            padding: 60px 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+
+        }
+
+        /* First Row - Heading */
+    .service-section .main-heading {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 1.3;
+        color: #1a1a1a;
+        margin-bottom: 0;
+    }
+
+    .service-section .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 0;
+    }
+
+
+        .service-section .row:first-child {
+        align-items: center;
+    }
+
+        /* Second Row - Stats Box */
+        .service-section .stats-box {
+            background: url('images/5a7431cee3e40d481d271a4e45fcd0fb7d2b23f2.png') center/cover;
+            background-color: #1a1a1a;
+            border-radius: 20px;
+            padding: 40px 30px;
+            color: white;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-section .stats-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            z-index: 1;
+        }
+
+        .service-section .stats-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-section .stats-number {
+        font-size: 4rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .service-section .stats-number .plus {
+        color: #99EA48;
+    }
+        .service-section .stats-text {
+            font-size: 1.1rem;
+            color: #e5e7eb;
+        }
+
+
+        .service-section .how-we-work-wrapper {
+  border-radius: 20px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+
+        /* Second Row - How We Work Box */
+.service-section .how-we-work-box {
+  position: relative;
+  height: 300px;
+  background: url('images/7d2b8abf1bb748bcd69b0d5a1cec2bb6aea060f1\ \(1\).png') center/cover;
+  /* background-color: #2563eb; */
+  border-radius: 20px;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+
+.service-section .how-we-work-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+       .service-section  .how-we-work-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            letter-spacing: 0.2em;
+            z-index: 2;
+            position: relative;
+        }
+
+        .service-section .play-button {
+            position: absolute;
+            right: -10px;
+            bottom: -13px;
+            width: 100px;
+            height: 100px;
+            background: #99EA48;
+            border: 13px solid #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .service-section .play-button:hover {
+            background: #80d93c;
+            transform: scale(1.05);
+        }
+
+        .service-section .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 20px solid black;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 5px;
+        }
+
+        .service-section .row {
+            margin-bottom: 40px;
+        }
+
+        .service-section .row:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+        .service-section .main-heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-section .description {
+            font-size: 0.95rem;
+        }
+
+            .service-section .stats-box,
+            .service-section .how-we-work-box {
+                height: 250px;
+                margin-bottom: 20px;
+            }
+
+            .service-section .how-we-work-text {
+                font-size: 2rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                .growth-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 80px 0;
+                        background: #000000;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+        }
+        
+        .growth-section .stats-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .growth-section .stat-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .stat-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .growth-section .stat-number {
+            font-size: 3.75rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .growth-section .stat-label {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #CCCCCC;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .growth-section .main-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .growth-section .main-title {
+            font-size: 4.375rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FFFFFF 0%, #4DB21F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        
+        .growth-section .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+        
+        .growth-section .cta-button {
+            background: #FFFFFF;
+            color: #000000;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 80px;
+        }
+        
+        .growth-section .cta-button:hover {
+            background: #4DB21F;
+            color: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(77, 178, 31, 0.3);
+        }
+        
+       .growth-section .social-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.growth-section .social-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    pointer-events: auto; 
+}
+
+
+.growth-section .linkedin {
+    top: 25%;
+    left: -40px;
+}
+.growth-section .linkedin img{
+
+    transform: rotate(-30deg);
+
+}
+
+.growth-section .pinterest {
+    top: -70px;
+    right: 20%;
+}
+
+.growth-section .instagram {
+    bottom: 60%;
+    right: 0%;
+}
+
+.growth-section .meta {
+    bottom: 15%;
+    left: 10%;
+}
+
+.growth-section .google-ads {
+    bottom: 20%;
+    right: 10%;
+}
+.growth-section .google-ads img{
+    transform: rotate(10deg);
+
+}
+
+
+.growth-section .social-icon.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.growth-section .social-icon:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+        
+        @media (max-width: 992px) {
+            .growth-section .social-icons {
+                height: 400px;
+            }
+            
+           .growth-section  .linkedin {
+    top: 25%;
+    left: -40px;
+    transform: rotate(30deg);
+}
+
+.growth-section .pinterest {
+    top: -70px;
+    right: 20%;
+}
+
+.growth-section .instagram {
+    bottom: 60%;
+    right: 0%;
+}
+
+.growth-section .meta {
+    bottom: 15%;
+    left: 10%;
+}
+
+.growth-section .google-ads {
+    bottom: 20%;
+    right: 10%;
+}
+        }
+        
+        @media (max-width: 768px) {
+            .growth-section .main-title {
+                font-size: 2.8rem;
+            }
+            
+            .growth-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .growth-section .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .growth-section .stats-container {
+                gap: 30px;
+            }
+            
+           
+            .growth-section .social-icons {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                height: auto;
+                padding: 20px 0;
+            }
+            
+            .growth-section .social-icon {
+                position: relative;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                transform: scale(0.8);
+                width: 60px;
+                height: 60px;
+            }
+            
+            .growth-section .pinterest {
+                transform: scale(0.8);
+            }
+            
+            .growth-section .social-icon.animate {
+                transform: scale(1);
+            }
+            
+            .growth-section .pinterest.animate {
+                transform: scale(1);
+            }
+            
+            .growth-section .social-icon img {
+                width: 30px;
+                height: 30px;
+            }
+            .growth-section .google-ads img{
+    transform: rotate(0deg);
+                
+            }
+            .growth-section .linkedin img{
+    transform: rotate(0deg);
+
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .growth-section .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .growth-section .stats-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .strategy-section {
+
+              font-family: 'Rubik';
+      background-color: #fff;
+      color: #000;
+      padding: 60px 0;
+
+    }
+    .strategy-section .main-heading {
+      font-family: 'Plus Jakarta Sans';
+      color: #253D32;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 70px;
+    }
+
+    .strategy-section .main-description {
+      font-family: 'Rubik'f;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin: 20px 0;
+      line-height: 40px;
+      color: #78847D;
+    }
+
+    .strategy-section .see-more {
+      font-family: 'Rubik';
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #A3B938;
+      /* text-decoration: none; */
+    }
+
+    .strategy-section .see-more:hover {
+      text-decoration: underline;
+    }
+
+    .strategy-section .feature-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 40px;
+      /* padding-left: 50px; */
+      justify-content: center;
+    }
+
+    .strategy-section .feature-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .strategy-section .feature-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #253D32;
+    }
+
+    .strategy-section .feature-description {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #78847D;
+      line-height: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .strategy-section .main-heading {
+        font-size: 2rem;
+        line-height: 50px;
+      }
+
+      .strategy-section .main-description {
+        font-size: 1rem;
+      }
+
+      .strategy-section .feature-title {
+        font-size: 1.25rem;
+      }
+
+      .strategy-section .feature-description {
+        font-size: 1rem;
+      }
+    }
+
+
+
+
+
+
+
+
+
+    .ready-section {
+      /* background: radial-gradient(circle at 30% 30%, #1a1a1a, #000000); */
+      background-color: #020609;
+      border-radius: 30px;
+      padding: 40px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: white;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px ;
+
+
+    }
+
+    .ready-text {
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .ready-button {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .ready-button:hover {
+      background-color: #e4e4e4;
+      transform: translateY(-2px);
+    }
+
+    .ready-button svg {
+      margin-left: 10px;
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .ready-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .ready-text {
+        font-size: 2rem;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .lead-title {
+      font-family: 'Plus Jakarta Sans';
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 80px;
+      color: #253d32;
+    }
+
+    .lead-desc {
+      font-family: 'Inter',;
+      font-size: 17px;
+      color: #333;
+      margin: 20px 0;
+      max-width: 500px;
+    }
+
+    .lead-btn {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+
+
+
+    .custom-card-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .card-custom {
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      height: 100%;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-custom::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      height: 50%;
+      border-radius: 20px 20px 0 0;
+      border: linear-gradient(to bottom, #ff5c5c, transparent); /* RED gradient */
+      z-index: -1;
+    }
+
+    .card-blue::before {
+      border: linear-gradient(to bottom, #00bfbf, transparent); /* BLUE gradient */
+    }
+
+    .icon-box {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .icon-red {
+      background-color: #ffeaea;
+    }
+
+    .icon-blue {
+      background-color: #e4ffff;
+    }
+
+    .card-title {
+      font-family: 'inter';
+      font-weight: 500;
+      font-size: 22px;
+      color: #011627;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: #011627;
+      margin-bottom: 10px;
+      line-height: 30px;
+    }
+    
+
+    .view-link {
+      font-family: 'inter';
+      font-weight: 400;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .view-red {
+      color: #FF1D03;
+    }
+
+    .view-blue {
+      color: #2EC4B6;
+    }
+
+    /* Offset right cards */
+    .card-offset {
+      margin-top: 35px;
+    }
+
+    @media (max-width: 768px) {
+      .lead-title {
+        font-size: 36px;
+        line-height: 50px;
+      }
+
+      .card-offset {
+        margin-top: 0 !important;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .card-text {
+        font-size: 15px;
+      }
+    }
+
+
+.img-red {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(98%) saturate(3720%) hue-rotate(340deg) brightness(94%) contrast(104%);
+}
+
+.img-green {
+  filter: brightness(0) saturate(100%) invert(74%) sepia(21%) saturate(1700%) hue-rotate(124deg) brightness(91%) contrast(95%);
+}
+
+
+  </style>
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-custom navbar-light">
+    <div class="container d-flex justify-content-between align-items-center">
+      
+   
+      <a class="navbar-brand" href="#">
+        <img src="images/e9fa0071a4c67b20eeff11119551f683a5565414.png" alt="iAds" class="nav-logo">
+      </a>
+
+      <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex align-items-center gap-4">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Case study</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      
+        <button class="get-started-btn d-none d-lg-inline-block">Get started</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <!-- <h5 class="offcanvas-title">Menu</h5> -->
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3">
+      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" href="#">Service</a>
+      <a class="nav-link" href="#">Case study</a>
+      <a class="nav-link" href="#">Contact</a>
+    
+      <button class="get-started-btn mt-3">Get started</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Left Content -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h1 class="hero-heading">Stay ahead of the curve with our forward-thinking</h1>
+          <p class="hero-description">
+            An award-winning SEO agency with disciplines in digital marketing, design, and website development. Focused on understanding you.
+          </p>
+          <div class="d-flex align-items-center">
+            <button class="btn-schedule">Schedule Call <i class="fa-solid fa-arrow-right ms-2"></i></button>
+            <a href="#" class="btn-case-study">View Case Study</a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-md-6 hero-image text-center ">
+          <img src="images/e29a8edfea8620d8990806c8f618a2394bceebfa.png" alt="Hero Illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="brand-banner py-4 mb-5">
+  <div class="container d-flex justify-content-evenly align-items-center gap-3 flex-nowrap brand-container">
+    <img src="images/468d9de104bfc26339b2d04c6470dd8a5a056429 (1).png" alt="Forbes" class="brand-logo">
+    <img src="images/33ddff11fa3e13f0d03cbee60fada9627c93a7d4.png" alt="Netflix" class="brand-logo">
+    <img src="images/9dbf019c92c91544ad3606094a4c331e18b96a62.png" alt="Amazon" class="brand-logo">
+    <img src="images/0903061c8809d54393bcdf7803940b5b9ff0fa55.png" alt="SEJ" class="brand-logo">
+    <img src="images/6b58e0d42d21ea981246d92c3ce7bffbf233f681.png" alt="Entrepreneur" class="brand-logo">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container service px-5">
+        <div class="service-section">
+
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <h1 class="main-heading">
+                        Provide the best service with out of the box ideas
+                    </h1>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="description">
+                        We are a passionate team of digital marketing enthusiasts dedicated to helping businesses succeed in the digital world. With years of experience and a deep understanding of the ever-evolving online landscape, we stay at the forefront of industry trends and technologies.
+                    </p>
+                </div>
+            </div>
+
+   
+            <div class="row">
+                <div class="col-12 col-md-3 mb-4 mb-md-0">
+                    <div class="stats-box">
+                        <div class="stats-content">
+                            <div class="stats-number">920<span style="color: #4ade80;">+</span></div>
+                            <div class="stats-text">Project finish with superbly</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 position-relative">
+  <div class="how-we-work-wrapper">
+    <div class="how-we-work-box">
+      <div class="how-we-work-text">HOW WE WORK</div>
+      <div class="play-button">
+        <div class="play-icon"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="growth-section">
+        <div class="container">
+            <!-- Stats Counter Section -->
+            <div class="stats-container" id="statsContainer">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="31">0</div>
+                    <div class="stat-label">Business</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="16">$0</div>
+                    <div class="stat-label">AD Spend Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0K</div>
+                    <div class="stat-label">Qualified Leads</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="55">$0M</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+            </div>
+  
+            <div class="main-content">
+                <h1 class="main-title">Your 24/4 PPC Growth Partner</h1>
+                <p class="subtitle">We manage. We refine. You dominate</p>
+                
+                <a href="#" class="cta-button">Lets Talk to an Expert</a>
+                
+            
+                <div class="social-icons" id="socialIcons">
+                    <div class="social-icon linkedin">
+                        <img src="images/56c7729b6292d244b20efbc9e7add8381c95a538.png" width="50" height="50"  alt="">
+
+                      
+                    </div>
+                    
+                    <div class="social-icon pinterest">
+         
+
+                        <img src="images/340f66ff6646c8c5cea0c8a8201883c0fb900424.png" width="50" height="50"  alt="">
+                    </div>
+                    
+                    <div class="social-icon instagram">
+
+                        <img src="images/38cbf03311e2c4f1a9b4d307d3b8fa84aa90f6b8.png" width="50" height="50"  alt="">
+
+                     
+                    </div>
+                    
+                    <div class="social-icon meta">
+                        <img src="images/735343d5decded45a6b720a6672f3d3e4902ea6e.png" width="50" height="50"  alt="">
+
+                     
+                    </div>
+                    
+                    <div class="social-icon google-ads">
+                        <img src="images/c9245e5802aea0e1ab3ea05a1ebe45387dfdd48b.png" width="50" height="50"  alt="">
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container strategy-section">
+    <div class="row align-items-start">
+
+      <div class="col-lg-5 col-md-12 mb-4 pe-3 ps-5">
+        <h2 class="main-heading">We’re Strategic Digital Marketing Agency</h2>
+        <p class="main-description">
+          We’ve created a full-stack structure for our working workflow processes, were from the funny the century initial all made, have spare to negatives
+        </p>
+        <a href="#" class="see-more">See More →</a>
+      </div>
+
+   
+      <div class="col-lg-7 col-md-12 ps-5 pt-3">
+        <div class="row">
+     
+          <div class="col-md-6">
+            <div class="feature-box">
+              <img src="images/Group 542 (1).png" alt="Content Strategy" class="feature-icon" />
+              <div class="feature-title">Content Strategy</div>
+              <div class="feature-description">
+                All our content marketing service packages include a custom content strategy
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="col-md-6">
+            <div class="feature-box">
+              <img src="images/Group 555.png" alt="Content Development" class="feature-icon" />
+              <div class="feature-title">Content Development</div>
+              <div class="feature-description">
+                We create some content calendar for your company’s must-share content
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="col-md-6">
+            <div class="feature-box">
+              <img src="images/Group 556.png" alt="Content Creation" class="feature-icon" />
+              <div class="feature-title">Content Creation</div>
+              <div class="feature-description">
+                Experienced in copywriting and marketing team begins creating content
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-box">
+              <img src="images/Group 554.png" alt="Content Optimization" class="feature-icon" />
+              <div class="feature-title">Content Optimization</div>
+              <div class="feature-description">
+                Your content marketing management services also include SEO
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+    <div class="ready-section">
+      <div class="ready-text">Ready to work with us ?</div>
+      <a href="#" class="ready-button">
+        Get Started
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="container mt-5">
+  <div class="row align-items-center mb-5">
+    
+    <div class="col-lg-6">
+      <h2 class="lead-title">More Leads.<br>Higher ROAS. Real Growth</h2>
+      <p class="lead-desc">
+        PageTraffic offers top-notch SEO and digital marketing solutions to help you rank high on search results, connect with.
+      </p>
+      <button class="lead-btn">Get Started</button>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="row">
+ 
+        <div class="col-md-6">
+          <div class="custom-card-wrapper">
+            <div class="card-custom card-red">
+              <div class="icon-box icon-red">
+                <img src="images/c9a54fe1c398a3bfebe50c8726f96e1d1ce3b21f.png" class="img-red" width="40" alt="">
+              </div>
+              <h5 class="card-title">I Want Leads</h5>
+              <p class="card-text">Looking to get higher ROI by improving website.</p>
+              <a href="#" class="view-link view-red">View more</a>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="col-md-6">
+          <div class="custom-card-wrapper card-offset">
+            <div class="card-custom card-blue">
+              <div class="icon-box icon-blue">
+                <img src="images/6158ec7a9e4b96e1a9ec4c9661b45542faa21725.png" class="img-green"  width="40" alt="">
+              </div>
+              <h5 class="card-title">I Want Leads</h5>
+              <p class="card-text">Looking to get higher ROI by improving website.</p>
+              <a href="#" class="view-link view-blue">View more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="custom-card-wrapper">
+            <div class="card-custom card-blue">
+              <div class="icon-box icon-blue">
+                <img src="images/c9a54fe1c398a3bfebe50c8726f96e1d1ce3b21f.png" class="img-green" width="40" alt="">
+              </div>
+              <h5 class="card-title">I Want Leads</h5>
+              <p class="card-text">Looking to get higher ROI by improving website.</p>
+              <a href="#" class="view-link view-blue">View more</a>
+            </div>
+          </div>
+        </div>
+
+     
+        <div class="col-md-6">
+          <div class="custom-card-wrapper card-offset">
+            <div class="card-custom card-red">
+              <div class="icon-box icon-red">
+                <img src="images/6158ec7a9e4b96e1a9ec4c9661b45542faa21725.png" class="img-red" width="40" alt="">
+              </div>
+              <h5 class="card-title">I Want Leads</h5>
+              <p class="card-text">Looking to get higher ROI by improving website.</p>
+              <a href="#" class="view-link view-red">View more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const offcanvasNav = document.getElementById('offcanvasNav');
+
+  function handleNavbarScroll() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+
+    }
+  }
+
+  // Initial state
+  handleNavbarScroll();
+
+  // Scroll listener
+  window.addEventListener('scroll', handleNavbarScroll);
+
+  // Offcanvas open → force black navbar
+  offcanvasNav.addEventListener('show.bs.offcanvas', () => {
+    navbar.classList.add('navbar-scrolled');
+    navbar.classList.remove('navbar-light');
+    navbar.classList.add('navbar-dark');
+  });
+
+  // Offcanvas close → restore navbar scroll logic
+  offcanvasNav.addEventListener('hidden.bs.offcanvas', () => {
+    handleNavbarScroll();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+     
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (suffix === 'M' && target === 55) {
+                    element.textContent = '$' + Math.floor(current) + 'M+';
+                } else if (suffix === '+' && target === 16) {
+                    element.textContent = '$' + Math.floor(current) + '+';
+                } else if (suffix === 'K' && target === 24) {
+                    element.textContent = Math.floor(current) + 'K+';
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 40);
+        }
+
+    
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const statItems = entry.target.querySelectorAll('.stat-item');
+                    
+                    statItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                            
+                            const numberElement = item.querySelector('.stat-number');
+                            const target = parseInt(numberElement.getAttribute('data-target'));
+                            
+           
+                            if (target === 55) {
+                                animateCounter(numberElement, target, 'M');
+                            } else if (target === 16) {
+                                animateCounter(numberElement, target, '+');
+                            } else if (target === 24) {
+                                animateCounter(numberElement, target, 'K');
+                            } else {
+                                animateCounter(numberElement, target, '+');
+                            }
+                        }, index * 200);
+                    });
+                    
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const socialObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const socialIcons = entry.target.querySelectorAll('.social-icon');
+                    
+                    socialIcons.forEach((icon, index) => {
+                        setTimeout(() => {
+                            icon.classList.add('animate');
+                        }, index * 100);
+                    });
+                    
+                    socialObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsContainer = document.getElementById('statsContainer');
+            const socialIcons = document.getElementById('socialIcons');
+            
+            if (statsContainer) {
+                statsObserver.observe(statsContainer);
+            }
+            
+            if (socialIcons) {
+                socialObserver.observe(socialIcons);
+            }
+        });
+
+     
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+         
+            console.log('CTA button clicked');
+        });
+</script>
+
+</body>
+</html>
