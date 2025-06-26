@@ -103,10 +103,17 @@
   color: white;
   width: 250px;
 }
-
 .offcanvas-custom .nav-link {
-  color: white;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: rgb(235, 229, 229);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.offcanvas-custom .nav-link:hover {
+  color: rgb(254, 253, 253);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1.6rem;
 }
 
 .offcanvas-custom .get-started-btn {
@@ -408,7 +415,7 @@
             width: 100px;
             height: 100px;
             background: #99EA48;
-            border: 13px solid #f8f9fa;
+            border: 13px solid #FFFFFF;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -769,6 +776,33 @@
                 flex-direction: column;
                 gap: 25px;
             }
+
+                        .growth-section .social-icon img {
+                width: 20px;
+                height: 20px;
+            }
+
+
+                        .growth-section .social-icons {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                height: auto;
+                padding: 20px 0;
+            }
+            
+            .growth-section .social-icon {
+                position: relative;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                transform: scale(0.8);
+                width: 60px;
+                height: 60px;
+            }
         }
 
 
@@ -999,16 +1033,16 @@
       background-clip: padding-box;
       position: relative;
       z-index: 1;
-
+/* 
       border-inline-start: 1px solid;
       border-block-start: 1px solid;
-      border-right: 1px solid;
-      border-image-source: radial-gradient( circle at left ,
+      border-right: 1px solid; */
+      /* border-image-source: radial-gradient( circle at left ,
         limegreen,transparent 10%
 
-      );
-      border-image-slice: 1;
-      padding: 10px;
+      ); */
+      /* border-image-slice: 1;
+      padding: 10px; */
     }
 
     /* .card-custom::before {
@@ -1053,6 +1087,13 @@
       margin-bottom: 8px;
     }
 
+
+    .card-red{
+      border: 1px solid rgb(237, 119, 119);
+    }
+        .card-blue{
+      border: 1px solid rgb(164, 222, 254);
+    }
     .card-text {
       font-family: 'Inter', sans-serif;
       font-weight: 400;

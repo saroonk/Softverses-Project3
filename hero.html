@@ -50,6 +50,16 @@
   /* border-radius: 10px; */
 }
 
+
+.image-with-text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(4, 43, 4, 0.5); 
+  z-index: 1;
+}
+
+
 .center-text {
   position: absolute;
   font-size: 3.2rem;
@@ -126,15 +136,103 @@
 }
 
 /* Individual Positioning */
-.instagram-icon {
+/* .instagram-icon {
   top: -9%;
   right: -9%;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 20px;
+
+  ;
+} */
+
+
+
+.instagram-icon {
+    top: -9%;
+  right: -9%;
+  padding: 10px;
+  /* border: 1px solid rgb(244, 188, 188); */
+  border-radius: 20px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+  transform: rotate(60deg); 
 }
 
-.facebook-icon {
-  top: 0px;
-  left: 0px;
+/* Blurred gradient background */
+.instagram-icon::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: blur(70px);
+  z-index: 0;
+  opacity: 0.9;
+  border-radius: inherit;
 }
+
+.instagram-icon img,
+.instagram-icon i {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-30deg); /* Reverse tilt for icon to appear straight */
+}
+
+/* .facebook-icon {
+  top: 0;
+  left: 0;
+  padding: 10px;
+  border: 1px solid black;
+  background: linear-gradient(135deg, #9cc3f6 0%, #577190 100%);
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} */
+.facebook-icon {
+   top: 0;
+  left: 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden; /* Clip the blur within rounded edges */
+}
+
+/* Blurred background layer */
+.facebook-icon::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: linear-gradient(135deg, #1877F2 0%, #0e5cb9 100%);
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.9;
+  border-radius: inherit;
+}
+
+/* Keep the icon in front and unblurred */
+.facebook-icon img,
+.facebook-icon i {
+  position: relative;
+  z-index: 2;
+}
+
 
 .netflix-icon {
   bottom: -20px;
@@ -468,8 +566,7 @@
 
 
 
-                    
-                    <!-- Right Side - Content -->
+           
                     <div class="col-lg-6 col-md-12">
                         <div class="content-section">
                             <h1 class="main-heading">
@@ -491,34 +588,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Add interactive hover effects
-        document.addEventListener('DOMContentLoaded', function() {
-            const socialIcons = document.querySelectorAll('.social-icon');
-            const ctaButton = document.querySelector('.cta-button');
-            
-            // Add click animation to CTA button
-            ctaButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-2px)';
-                }, 150);
-            });
-            
-            // Add subtle parallax effect to background shapes
-            document.addEventListener('mousemove', function(e) {
-                const shapes = document.querySelectorAll('.bg-shape');
-                const x = e.clientX / window.innerWidth;
-                const y = e.clientY / window.innerHeight;
-                
-                shapes.forEach((shape, index) => {
-                    const speed = (index + 1) * 0.5;
-                    const xPos = (x - 0.5) * speed;
-                    const yPos = (y - 0.5) * speed;
-                    shape.style.transform += ` translate(${xPos}px, ${yPos}px)`;
-                });
-            });
-        });
+
+
     </script>
 </body>
 </html>
