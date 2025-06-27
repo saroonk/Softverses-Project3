@@ -24,53 +24,64 @@
 
   
   <nav class="navbar navbar-expand-lg navbar-custom navbar-light">
-    <div class="container d-flex justify-content-between align-items-center">
-      
-   
-      <a class="navbar-brand" href="#">
-        <img src="images/e9fa0071a4c67b20eeff11119551f683a5565414.png" alt="iAds" class="nav-logo">
-      </a>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/e9fa0071a4c67b20eeff11119551f683a5565414.png" alt="iAds" class="nav-logo">
+            </a>
 
-      <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex align-items-center gap-4">
-        <ul class="navbar-nav gap-2">
-          <li class="nav-item">
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex align-items-center gap-4">
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Service
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Web Design</a>
+                            <a class="dropdown-item" href="#">Digital Marketing</a>
+                            <a class="dropdown-item" href="#">Advertisement</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Case study</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <button class="get-started-btn d-none d-lg-inline-block">Get started</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNav">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column gap-3">
             <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Case study</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      
-        <button class="get-started-btn d-none d-lg-inline-block">Get started</button>
-      </div>
+            <div class="mobile-dropdown">
+                <div class="nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
+                    Services <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="mobile-dropdown-content" id="mobileDropdownContent">
+                    <a class="mobile-dropdown-item" href="#">Web Design</a>
+                    <a class="mobile-dropdown-item" href="#">Digital Marketing</a>
+                    <a class="mobile-dropdown-item" href="#">Advertisement</a>
+                </div>
+            </div>
+            <a class="nav-link" href="#">Case studies</a>
+            <a class="nav-link" href="#">Contact Us</a>
+            <button class="get-started-btn mt-3">Get started</button>
+        </div>
     </div>
-  </nav>
 
-
-  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNav">
-    <div class="offcanvas-header">
-      <!-- <h5 class="offcanvas-title">Menu</h5> -->
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body d-flex flex-column gap-3">
-      <a class="nav-link active" href="#">Home</a>
-      <a class="nav-link" href="#">Services</a>
-      <a class="nav-link" href="#">Case studies</a>
-      <a class="nav-link" href="#">Contact Us</a>
-    
-      <button class="get-started-btn mt-3">Get started</button>
-    </div>
-  </div>
 
 
 
@@ -509,7 +520,7 @@
                     </div>
                     
                     <div class="timeline-point">
-                        <div class="point-circle"></div>
+                        <div class="point-circle"><i class="fas fa-bullseye"></i></div>
                         <div class="point-content">
                             <div class="point-year">Audience Targeting & Testing</div>
                             <div class="point-description">
@@ -521,7 +532,7 @@
                     </div>
                     
                     <div class="timeline-point">
-                        <div class="point-circle"></div>
+                        <div class="point-circle"><i class="fas fa-chart-line"></i></div>
                         <div class="point-content">
                             <div class="point-year">Budget Scaling & Smart Bidding</div>
                             <div class="point-description">
@@ -533,7 +544,7 @@
                     </div>
                     
                     <div class="timeline-point">
-                        <div class="point-circle"></div>
+                        <div class="point-circle"><i class="fas fa-sliders-h"></i></div>
                         <div class="point-content">
                             <div class="point-year">Creative Performance Optimization</div>
                             <div class="point-description">
@@ -736,40 +747,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-  const navbar = document.querySelector('.navbar');
-  const offcanvasNav = document.getElementById('offcanvasNav');
+   const navbar = document.querySelector('.navbar');
+        const offcanvasNav = document.getElementById('offcanvasNav');
 
-  function handleNavbarScroll() {
-    if (window.scrollY > 50) {
-      navbar.classList.add('navbar-scrolled');
+        function handleNavbarScroll() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
 
-    } else {
-      navbar.classList.remove('navbar-scrolled');
+        handleNavbarScroll();
+        window.addEventListener('scroll', handleNavbarScroll);
 
-    }
-  }
+        offcanvasNav.addEventListener('show.bs.offcanvas', () => {
+            navbar.classList.add('navbar-scrolled');
+            navbar.classList.remove('navbar-light');
+            navbar.classList.add('navbar-dark');
+        });
 
-  // Initial state
-  handleNavbarScroll();
-
-  // Scroll listener
-  window.addEventListener('scroll', handleNavbarScroll);
-
-  // Offcanvas open → force black navbar
-  offcanvasNav.addEventListener('show.bs.offcanvas', () => {
-    navbar.classList.add('navbar-scrolled');
-    navbar.classList.remove('navbar-light');
-    navbar.classList.add('navbar-dark');
-  });
-
-  // Offcanvas close → restore navbar scroll logic
-// Modify your existing JavaScript
-offcanvasNav.addEventListener('hidden.bs.offcanvas', () => {
-  navbar.classList.remove('navbar-dark');
-  handleNavbarScroll(); // Re-apply scroll logic
-});
+        offcanvasNav.addEventListener('hidden.bs.offcanvas', () => {
+            navbar.classList.remove('navbar-dark');
+            handleNavbarScroll(); 
+        });
 
 
+        function toggleMobileDropdown() {
+            const toggle = document.querySelector('.mobile-dropdown-toggle');
+            const content = document.getElementById('mobileDropdownContent');
+            
+            toggle.classList.toggle('active');
+            content.classList.toggle('active');
+        }
 
 
 
