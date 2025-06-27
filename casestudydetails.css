@@ -1,0 +1,363 @@
+body{
+      background-color: #fdf8f7;
+
+}
+
+.case-study-header {
+    background: linear-gradient(135deg, #ffffff 0%, #d0e7ff 100%);
+    background-size: cover;
+    background-position: center;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 100px 20px; 
+    margin-bottom: 100px;
+    position: relative; /* Needed for layering */
+    z-index: 1;
+}
+
+.case-study-header h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+.case-study-header p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-family: 'Rubik', sans-serif;
+}
+
+.img-container {
+  position: relative;
+  z-index: 2;
+  margin-top: -150px; /* Adjust as needed */
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 700px; 
+   /* height: clamp(300px, 20vw, 800px); */
+
+  overflow: hidden;
+  /* border-radius: 12px;  */
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width:796px) {
+
+  .img-wrapper {
+  width: 100%;
+  height: 400px; 
+   /* height: clamp(300px, 20vw, 800px); */
+
+  overflow: hidden;
+  /* border-radius: 12px;  */
+}
+  
+}
+
+
+@media (max-width:496px) {
+
+  .img-wrapper {
+  width: 100%;
+  height: 200px; 
+   /* height: clamp(300px, 20vw, 800px); */
+
+  overflow: hidden;
+  /* border-radius: 12px;  */
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .case-metrics {
+      background-color: #f2f4f5;
+      padding: clamp(10px, 8vw, 100px) clamp(16px, 5vw, 40px);
+
+      /* border-radius: 8px; */
+      margin: 40px auto;
+            font-family: 'Rubik', sans-serif;
+    }
+
+    .case-metrics .description{
+        font-size: 1.2rem;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    .metric {
+      text-align: center;
+      border-right: 1px solid #d1d1d1;
+    }
+
+    .metric:last-child {
+      border-right: none;
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0c1b36;
+    }
+
+    .metric-label {
+      margin-top: 5px;
+      font-weight: 500;
+      color: #ff0066;
+    }
+
+    .services-label,
+    .industries-label {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #0c1b36;
+    }
+
+    .pill {
+      display: inline-block;
+      background-color: white;
+      color: #0c1b36;
+      padding: 5px 15px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 5px 5px 0 0;
+      border: 1px solid #ddd;
+    }
+
+    @media (max-width: 767.98px) {
+      .metric {
+        border-right: none;
+        margin-bottom: 20px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .about-section {
+      color: #0c1b36;
+      font-family: 'Rubik', sans-serif;
+  padding-left: clamp(16px, 8vw, 150px);
+  padding-right: clamp(16px, 8vw, 150px);
+  padding-top: 60px;
+  padding-bottom: 60px;
+    }
+
+    .section-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: #0c1b36;
+      margin-bottom: 20px;
+    }
+
+    .section-heading .dot {
+      color: #ff0066;
+    }
+
+    .section-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 576px) {
+      .section-heading {
+        text-align: center;
+      }
+
+      .section-text {
+        text-align: justify;
+      }
+    }
+
+
+    /* .image-container{
+      margin-top: 10px;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      .section-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #001333;
+      text-align: center;
+    }
+
+    h2.section-title span {
+      color: #e70084;
+    }
+
+    .section-description {
+      max-width: 650px;
+      margin-top: 10px;
+      font-size: 1.1rem;
+      line-height: 35px;
+    }
+
+
+
+    .case-study-card {
+            /* background: white; */
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+            margin-bottom: 80px;
+            gap: 80px;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); */
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: black;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            font-family: 'Rubik', sans-serif;
+            font-size: 17px;
+            color: #333;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+
+
+        @media (max-width: 900px) {
+            .case-study-card {
+                margin-bottom: 45px;
+            }
+            
+            .card-content {
+                padding: 20px;
+            }
+            
+            .card-title {
+                font-size: 22px;
+            }
+            
+            .card-description {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .case-study-container {
+                padding: 0 15px;
+            }
+            
+            .card-content {
+                padding: 18px;
+            }
+            
+            .card-title {
+                font-size: 20px;
+            }
+            
+            .card-description {
+                font-size: 14px;
+            }
+            .section-title{
+              font-size: 2.4rem;
+            }
+        }
