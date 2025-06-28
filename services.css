@@ -401,7 +401,7 @@
         .service-icon {
     font-size: 40px;
     margin-bottom: 15px;
-    color: #000; /* Or white if on dark background */
+    color: #000; 
 }
 
 .service-card {

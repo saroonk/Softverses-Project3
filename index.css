@@ -377,7 +377,7 @@
     }
 
     .hero-section .hero-image img {
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
     }
 
@@ -395,11 +395,11 @@
 
   .brand-container {
     background-color: #FFFBFB;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11); /* #0000001C is 11% opacity */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.11);
     border-radius: 12px;
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
     padding: 10px;
   }
 
