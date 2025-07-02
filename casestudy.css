@@ -310,8 +310,10 @@ background: linear-gradient(135deg, #ffffff 0%, #d0e7ff 100%);
 
 .case-study-header h1 {
     font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 700;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif; */
+                                                         font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -335,8 +337,10 @@ background: linear-gradient(135deg, #ffffff 0%, #d0e7ff 100%);
 }
 
 .case-study-subhead {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
+    /* font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700; */
+                                                         font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
     color: #001333;
     font-size: 3rem;
     margin-bottom: 2rem;

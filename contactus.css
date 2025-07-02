@@ -297,7 +297,7 @@
 
         .contact-section {
                         min-height: 100vh;
-            font-family: 'Rubik', sans-serif;
+            /* font-family: 'Rubik', sans-serif; */
             padding: 60px 0;
       padding-top: 135px; 
 
@@ -317,7 +317,9 @@
         }
 
         .main-heading {
-            font-family: 'Plus Jakarta Sans';
+            /* font-family: 'Plus Jakarta Sans'; */
+                                               font-family: 'Montserrat', sans-serif !important;
+            font-weight: 600 !important;
             font-size: 4.5rem;
             font-weight: 500;
             color: #1a1a1a;

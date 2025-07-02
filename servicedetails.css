@@ -21,7 +21,7 @@
 
       
         body{
-            background-color: #e0dede;
+            background-color: #e0dedf;
 
         }
 
@@ -304,7 +304,7 @@
 
         .hero-section {
             /* background: linear-gradient(135deg, #E0E7FF 0%, #F3ECFF 100%); */
-            background-color: #e0dede;
+            background-color: #e0dedf;
             min-height: 100vh;
             position: relative;
             overflow: hidden;
@@ -316,8 +316,10 @@
         }
 
         .hero-title {
-            font-family: 'Plus Jakarta Sans';
-            font-weight: 600;
+            /* font-family: 'Plus Jakarta Sans';
+            font-weight: 600; */
+                                               font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             line-height: 1.1;
             color: #0e0e0f;
@@ -385,8 +387,10 @@
             .service-heading {
       font-size: 48px;
       font-weight: 700;
-     font-family: 'Plus Jakarta Sans';
-        font-weight: 600;
+     /* font-family: 'Plus Jakarta Sans';
+        font-weight: 600; */
+                                           font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
         font-size: clamp(2.5rem, 5vw, 3.5rem);
 
     }
@@ -470,7 +474,9 @@
 
 
     .brand-content h2{
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* font-family: 'Plus Jakarta Sans', sans-serif; */
+                                               font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
 
     }
     .brand-content p{
@@ -488,7 +494,7 @@
 
 
     .consultation-section {
-      background-color: #f7f7fa;
+      background-color: #f8f6f7;
       border-radius: 60px;
       padding: 80px 20px;
       position: relative;
@@ -499,7 +505,9 @@
     .consultation-section h1 {
       font-weight: 700;
       font-size:4rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* font-family: 'Plus Jakarta Sans', sans-serif; */
+                                   font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
 
       line-height: 1.2;
       color: #000;
